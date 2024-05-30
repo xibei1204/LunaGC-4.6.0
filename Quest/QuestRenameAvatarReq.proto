@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message QuestRenameAvatarReq {
+  bool is_check  = 1;
+  uint32 rename_id = 7;
+  string avatar_name = 9;
+}
