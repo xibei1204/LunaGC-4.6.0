@@ -84,7 +84,7 @@ public final class GameServerPacketHandler {
                 // TODO Remove this when no more needed
                 ex.printStackTrace();
             }
-            Grasscutter.getLogger().info("Handled packet (" + cmdId + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
+            Grasscutter.getLogger().info("Handled packet (" + opcode + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
             return; // Packet successfully handled
         }
 
