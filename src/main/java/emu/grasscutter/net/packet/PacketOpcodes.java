@@ -7,7 +7,7 @@ public final class PacketOpcodes {
     // Opcodes     //4.6.0
     public static final int QuestCreateEntityReq = 762;     //4.6.0
     public static final int QuestCreateEntityRsp = 7971;     //4.6.0
-    public static final int QuestDelNotify = 27146;     //4.6.0
+    public static final int QuestDelNotify = 27512;     //4.6.0
     public static final int QuestDestroyEntityReq = 842;     //4.6.0
     public static final int QuestDestroyEntityRsp = 22741;     //4.6.0
     public static final int QuestDestroyNpcReq = 3062;     //4.6.0
