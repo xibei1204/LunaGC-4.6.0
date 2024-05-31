@@ -2,6 +2,6 @@ syntax = "proto3";
 option java_package = "emu.grasscutter.net.proto";
 
 message QuestDelNotify {
-  // CMD_ID = 27146  or 27512
-  uint32 quest_id = 8; //or 8 11 
+  // CMD_ID = 27512  or 
+  uint32 quest_id = 11; //or  11 
 }
