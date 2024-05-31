@@ -89,4 +89,3 @@ public final class GameServerPacketHandler {
 
         // Log unhandled packets
             Grasscutter.getLogger().info("Unhandled packet ("+ opcode + "): "+ emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
-}
