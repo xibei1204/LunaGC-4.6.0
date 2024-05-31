@@ -84,11 +84,18 @@ public final class GameServerPacketHandler {
                 // TODO Remove this when no more needed
                 ex.printStackTrace();
             }
-            Grasscutter.getLogger().info("Handled packet (" + opcode + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
             return; // Packet successfully handled
         }
 
         // Log unhandled packets
-            Grasscutter.getLogger().info("Unhandled packet ("+ opcode+ "): "+ emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
+        if (GAME_INFO.logPackets == ServerDebugMode.MISSING
+                || GAME_INFO.logPackets == ServerDebugMode.ALL) {
+            Grasscutter.getLogger()
+                    .info(
+                            "Unhandled packet ("
+                                    + opcode
+                                    + "): "
+                                    + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
+        }
     }
 }
