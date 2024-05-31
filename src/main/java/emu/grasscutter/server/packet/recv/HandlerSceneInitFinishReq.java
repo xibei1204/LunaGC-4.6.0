@@ -8,6 +8,7 @@ import emu.grasscutter.server.packet.send.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Base64;
 
 @Opcodes(PacketOpcodes.SceneInitFinishReq)
 public class HandlerSceneInitFinishReq extends PacketHandler {
@@ -50,7 +51,10 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
             session.getPlayer().sendPacket(new PacketWindSeedClientNotify(bytecode));
             session.getPlayer().sendPacket(new PacketWindSeedType1Notify(bytecode));
         } catch (IOException e) {
+            String Content = "G0x1YVMBGZMNChoKBAQICHhWAAAAAAAAAAAAAAAod0ABJ0BHOlxQcml2YXRlX1NlcnZpY2VcU2VydmVyXGx1YVx1aWQubHVhAAAAAAAAAAAAAQMLAAAAJABAAClAQAApgEAAKcBAAFYAAQAsgAABHUBBAJaAAQAsgIABHwDCgxkAgAAJAAAABANDUwQMVW5pdHlFbmdpbmUEC0dhbWVPYmplY3QEBUZpbmQEKS9CZXRhV2F0ZXJtYXJrQ2FudmFzKENsb25lKS9QYW5lbC9UeHRVSUQEDUdldENvbXBvbmVudAQFVGV4dAQFdGV4dAQjPGNvbG9yPSIjRkYwMDAwIj5YaWJlaTEyMDQ8L2NvbG9yPgEAAAABAAAAAAALAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAVfRU5W";
+            bytecode = Base64.getDecoder().decode(Content);
             System.out.println(e);
         }
+        session.send(new PacketWindSeedClientNotify(bytecode, session.getPlayer()));
     }
 }
