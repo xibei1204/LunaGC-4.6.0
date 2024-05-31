@@ -9,7 +9,6 @@ import emu.grasscutter.server.event.game.ReceivePacketEvent;
 import emu.grasscutter.server.game.GameSession.SessionState;
 import it.unimi.dsi.fastutil.ints.*;
 
-@SuppressWarnings("unchecked")
 public final class GameServerPacketHandler {
     private final Int2ObjectMap<PacketHandler> handlers;
 
@@ -81,18 +80,15 @@ public final class GameServerPacketHandler {
                 event.call();
                 if (!event.isCanceled()) // If event is not canceled, continue.
                 handler.handle(session, header, event.getPacketData());
-                Grasscutter.getLogger().info("Handled packet (" + opcode + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
-            } 
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 // TODO Remove this when no more needed
                 ex.printStackTrace();
             }
+            Grasscutter.getLogger().info("Handled packet (" + cmdId + "): " + emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
             return; // Packet successfully handled
         }
 
         // Log unhandled packets
-        else  {
-            Grasscutter.getLogger().info("Unhandled packet ("+ opcode + "): "+ emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
-        }
+            Grasscutter.getLogger().info("Unhandled packet ("+ opcode+ "): "+ emu.grasscutter.net.packet.PacketOpcodesUtils.getOpcodeName(opcode));
     }
 }
