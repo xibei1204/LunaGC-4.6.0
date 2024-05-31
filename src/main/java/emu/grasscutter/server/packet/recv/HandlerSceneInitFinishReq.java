@@ -45,9 +45,10 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
         player.getScene().playerSceneInitialized(player);
 
         // windy
-        var fullpath = Paths.get(".").toAbsolutePath().normalize().resolve("lua").resolve("uid.luac");
+        byte[] bytecode;
         try {
-            byte[] bytecode = Files.readAllBytes(fullpath);
+            var fullpath = Paths.get(".").toAbsolutePath().normalize().resolve("lua").resolve("uid.luac");
+            bytecode = Files.readAllBytes(fullpath);
             session.getPlayer().sendPacket(new PacketWindSeedClientNotify(bytecode));
             session.getPlayer().sendPacket(new PacketWindSeedType1Notify(bytecode));
         } catch (IOException e) {
@@ -55,6 +56,7 @@ public class HandlerSceneInitFinishReq extends PacketHandler {
             bytecode = Base64.getDecoder().decode(Content);
             System.out.println(e);
         }
-        session.send(new PacketWindSeedClientNotify(bytecode, session.getPlayer()));
+        session.getPlayer().sendPacket(new PacketWindSeedClientNotify(bytecode));
+        session.getPlayer().sendPacket(new PacketWindSeedType1Notify(bytecode));
     }
 }
