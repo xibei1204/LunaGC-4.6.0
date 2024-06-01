@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 28535
+message RogueDiaryDungeonSettleNotify {
+  uint32 cur_round = 1;
+  uint32 explore_time = 9;
+  bool is_finish = 11;
+}

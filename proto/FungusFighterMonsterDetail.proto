@@ -1,0 +1,8 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+message FungusFighterMonsterDetail {
+  uint32 fungus_id = 1;
+  float cur_hp_percentage = 3;
+  bool is_alive = 12;
+}
