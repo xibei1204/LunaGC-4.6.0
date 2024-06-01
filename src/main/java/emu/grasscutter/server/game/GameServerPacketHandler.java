@@ -45,9 +45,9 @@ public final class GameServerPacketHandler {
 
     public void handle(GameSession session, int opcode, byte[] header, byte[] payload) {
         PacketHandler handler = this.handlers.get(opcode);
-        if(opcode != PacketOpcodesUtils.AbilityInvocationsNotify && opcode != PacketOpcodesUtils.CombatInvocationsNotify && opcode != PacketOpcodesUtils.UnionCmdNotify)
+        if(opcode != PacketOpcodes.AbilityInvocationsNotify && opcode != PacketOpcodes.CombatInvocationsNotify && opcode != PacketOpcodes.UnionCmdNotify)
         {
-            Grasscutter.getLogger().info("Received a packet("+ opcode+ "): "+ PacketOpcodesUtils.getOpcodeName(opcode));
+            Grasscutter.getLogger().info("Received a packet("+ opcode+ "): "+ PacketOpcodes.getOpcodeName(opcode));
         }
         
         if (handler != null) {
