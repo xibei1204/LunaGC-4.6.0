@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 25614
+message TriggerRoguelikeRuneRsp {
+  int32 retcode = 1;
+  uint32 available_count = 6;
+  uint32 rune_id = 8;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 27670
+message RogueSwitchAvatarReq {
+  repeated uint64 onstage_avatar_guid_list = 3;
+  uint32 dungeon_id = 7;
+  uint32 cell_id = 11;
+  uint64 cur_avatar_guid = 12;
+}

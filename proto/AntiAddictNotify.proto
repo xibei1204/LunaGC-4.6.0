@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "emu.grasscutter.net.proto";
+
+// CmdId: 2448
+message AntiAddictNotify {
+  string level = 3;
+  int32 msg_type = 8;
+  string msg = 10;
+}

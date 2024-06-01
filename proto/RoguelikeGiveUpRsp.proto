@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "RoguelikeDungeonSettleInfo.proto";
+option java_package = "emu.grasscutter.net.proto";
+
+message RoguelikeGiveUpRsp {
+  uint32 stage_id = 3;
+  int32 retcode = 11;
+  oneof info {
+    RoguelikeDungeonSettleInfo settle_info = 7;
+  }
+}
