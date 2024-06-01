@@ -1,8 +1,0 @@
-syntax = "proto3";
-import "Quest.proto";
-option java_package = "emu.grasscutter.net.proto";
-
-message QuestListUpdateNotify {
-  // CMD_ID = 24287
-  repeated Quest quest_list = 15; //or 9
-}
