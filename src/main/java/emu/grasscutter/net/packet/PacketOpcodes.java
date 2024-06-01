@@ -5,6 +5,22 @@ public final class PacketOpcodes {
     public static final int NONE = 0;
 
     // Opcodes     //4.6.0
+    public static final int AntiAddictNotify = 2448;     //4.6.0
+    public static final int EnterRoguelikeDungeonNotify = 7434;     //4.6.0
+    public static final int EvtCostStaminaNotify = 20585;     //4.6.0
+    public static final int GCGStartChallengeByCheckRewardRsp = 21340;     //4.6.0
+    public static final int RogueCellUpdateNotify = 22316;     //4.6.0
+    public static final int RogueDiaryDungeonSettleNotify = 28535;     //4.6.0
+    public static final int RogueDiaryTiredAvatarNotify = 1232;     //4.6.0
+    public static final int RoguelikeResourceBonusPropUpdateNotify = 6698;     //4.6.0
+    public static final int RoguelikeSelectAvatarAndEnterDungeonReq = 21679;     //4.6.0
+    public static final int RogueSwitchAvatarReq = 27670;     //4.6.0
+    public static final int RogueSwitchAvatarRsp = 6997;     //4.6.0
+    public static final int StartRogueDiaryPlayReq = 28933;     //4.6.0
+    public static final int StartRogueEliteCellChallengeReq = 1166;     //4.6.0
+    public static final int TriggerRoguelikeRuneRsp = 25614;     //4.6.0
+
+
     public static final int QuestCreateEntityReq = 762;     //4.6.0
     public static final int QuestCreateEntityRsp = 7971;     //4.6.0
     public static final int QuestDelNotify = 27512;     //4.6.0
@@ -351,7 +367,7 @@ public final class PacketOpcodes {
     public static final int AnchorPointOpReq = 39923096;     //4.0.0
     public static final int AnchorPointOpRsp = 399726;     //4.0.0
     public static final int AnimatorForceSetAirMoveNotify = 39920049;     //4.0.0
-    public static final int AntiAddictNotify = 39923699;     //4.0.0
+    
     public static final int AranaraCollectionDataNotify = 39921685;     //4.0.0
     public static final int AreaPlayInfoNotify = 39923472;     //4.0.0
     public static final int ArenaChallengeFinishNotify = 39920843;     //4.0.0
@@ -859,7 +875,7 @@ public final class PacketOpcodes {
     public static final int EnterMechanicusDungeonRsp = 39929863;     //4.0.0
     public static final int EnterRogueDiaryDungeonReq = 3996423;     //4.0.0
     public static final int EnterRogueDiaryDungeonRsp = 39926399;     //4.0.0
-    public static final int EnterRoguelikeDungeonNotify = 3998336;     //4.0.0
+    
     public static final int EnterSceneWeatherAreaNotify = 3997317;     //4.0.0
     public static final int EnterTrialAvatarActivityDungeonReq = 3997738;     //4.0.0
     public static final int EnterTrialAvatarActivityDungeonRsp = 3998751;     //4.0.0
@@ -891,7 +907,7 @@ public final class PacketOpcodes {
     public static final int EvtBulletDeactiveNotify = 39926348;     //4.0.0
     public static final int EvtBulletHitNotify = 39923746;     //4.0.0
     public static final int EvtBulletMoveNotify = 3998672;     //4.0.0
-    public static final int EvtCostStaminaNotify = 399810;     //4.0.0
+    
     public static final int EvtDestroyServerGadgetNotify = 39923600;     //4.0.0
     public static final int EvtEntityStartDieEndNotify = 39927889;     //4.0.0
     public static final int EvtFaceToDirNotify = 3993850;     //4.0.0
@@ -1104,7 +1120,7 @@ public final class PacketOpcodes {
     public static final int GCGSkillPreviewAskRsp = 39924602;     //4.0.0
     public static final int GCGSkillPreviewNotify = 39923522;     //4.0.0
     public static final int GCGStartChallengeByCheckRewardReq = 3996573;     //4.0.0
-    public static final int GCGStartChallengeByCheckRewardRsp = 39925802;     //4.0.0
+    
     public static final int GCGStartChallengeReq = 3997232;     //4.0.0
     public static final int GCGStartChallengeRsp = 39925227;     //4.0.0
     public static final int GCGTCInviteReq = 3992997;     //4.0.0
@@ -2091,14 +2107,14 @@ public final class PacketOpcodes {
     public static final int ReunionPrivilegeChangeNotify = 39925522;     //4.0.0
     public static final int ReunionSettleNotify = 39928864;     //4.0.0
     public static final int RobotPushPlayerDataNotify = 39923031;     //4.0.0
-    public static final int RogueCellUpdateNotify = 3994597;     //4.0.0
+    
     public static final int RogueDiaryCoinAddNotify = 39921318;     //4.0.0
     public static final int RogueDiaryDungeonInfoNotify = 3991309;     //4.0.0
-    public static final int RogueDiaryDungeonSettleNotify = 39927081;     //4.0.0
+    
     public static final int RogueDiaryRepairInfoNotify = 3999164;     //4.0.0
     public static final int RogueDiaryReviveAvatarReq = 39926124;     //4.0.0
     public static final int RogueDiaryReviveAvatarRsp = 3994056;     //4.0.0
-    public static final int RogueDiaryTiredAvatarNotify = 39924388;     //4.0.0
+    
     public static final int RogueDungeonPlayerCellChangeNotify = 3996884;     //4.0.0
     public static final int RogueFinishRepairReq = 39921443;     //4.0.0
     public static final int RogueFinishRepairRsp = 3999649;     //4.0.0
@@ -2106,8 +2122,8 @@ public final class PacketOpcodes {
     public static final int RogueHealAvatarsRsp = 3993917;     //4.0.0
     public static final int RogueResumeDungeonReq = 39928359;     //4.0.0
     public static final int RogueResumeDungeonRsp = 39922999;     //4.0.0
-    public static final int RogueSwitchAvatarReq = 3997818;     //4.0.0
-    public static final int RogueSwitchAvatarRsp = 3997922;     //4.0.0
+    
+    
     public static final int RoguelikeCardGachaNotify = 39920313;     //4.0.0
     public static final int RoguelikeEffectDataNotify = 399920;     //4.0.0
     public static final int RoguelikeEffectViewReq = 39924896;     //4.0.0
@@ -2116,9 +2132,9 @@ public final class PacketOpcodes {
     public static final int RoguelikeGiveUpRsp = 3998629;     //4.0.0
     public static final int RoguelikeMistClearNotify = 39927988;     //4.0.0
     public static final int RoguelikeRefreshCardCostUpdateNotify = 39927478;     //4.0.0
-    public static final int RoguelikeResourceBonusPropUpdateNotify = 3999873;     //4.0.0
+
     public static final int RoguelikeRuneRecordUpdateNotify = 3991760;     //4.0.0
-    public static final int RoguelikeSelectAvatarAndEnterDungeonReq = 3998269;     //4.0.0
+
     public static final int RoguelikeSelectAvatarAndEnterDungeonRsp = 3997229;     //4.0.0
     public static final int RoguelikeTakeStageFirstPassRewardReq = 3996306;     //4.0.0
     public static final int RoguelikeTakeStageFirstPassRewardRsp = 3999513;     //4.0.0
@@ -2285,11 +2301,11 @@ public final class PacketOpcodes {
     public static final int StartEffigyChallengeRsp = 39928896;     //4.0.0
     public static final int StartFishingReq = 39924205;     //4.0.0
     public static final int StartFishingRsp = 39927055;     //4.0.0
-    public static final int StartRogueDiaryPlayReq = 39929988;     //4.0.0
+    
     public static final int StartRogueDiaryPlayRsp = 3993886;     //4.0.0
     public static final int StartRogueDiaryRoomReq = 39920500;     //4.0.0
     public static final int StartRogueDiaryRoomRsp = 39924237;     //4.0.0
-    public static final int StartRogueEliteCellChallengeReq = 39924719;     //4.0.0
+    
     public static final int StartRogueEliteCellChallengeRsp = 3999589;     //4.0.0
     public static final int StartRogueNormalCellChallengeReq = 39927300;     //4.0.0
     public static final int StartRogueNormalCellChallengeRsp = 3998056;     //4.0.0
@@ -2427,7 +2443,7 @@ public final class PacketOpcodes {
     public static final int TriggerCreateGadgetToEquipPartNotify = 3993153;     //4.0.0
     public static final int TriggerRoguelikeCurseNotify = 39926431;     //4.0.0
     public static final int TriggerRoguelikeRuneReq = 39926666;     //4.0.0
-    public static final int TriggerRoguelikeRuneRsp = 3991039;     //4.0.0
+    
     public static final int TryCustomDungeonReq = 39928599;     //4.0.0
     public static final int TryCustomDungeonRsp = 3999741;     //4.0.0
     public static final int TryEnterNextRogueDiaryDungeonReq = 399619;     //4.0.0
